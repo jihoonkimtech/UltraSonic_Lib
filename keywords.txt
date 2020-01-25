@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map For UltraSonic
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+UltraSonic	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+sensing	KEYWORD2
+distByInt	KEYWORD2
+distByFloat	KEYWORD2
+distPrint	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
