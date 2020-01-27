@@ -69,6 +69,15 @@ void UltraSonic::distPrint(int ms = 0, int legthType = 1){
 	sensing(legthType);
 	Serial.print("distance : ");
 	Serial.print(_distance);
-	Serial.println(" cm");
+	if()
+	
+	
+	if(legthType == INCH)
+		Serial.println(" in");
+	if(legthType == FEET)
+		Serial.println(" ft");
+	else
+		Serial.println(" cm");
+		
 	delay(ms);
 }
