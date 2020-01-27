@@ -32,6 +32,7 @@ class UltraSonic{
 		void sensing(int legthType);
 		
 	private : 
+		int _pinType;
 		int _sigPin;
 		int _echoPin;
 		int _trigPin;

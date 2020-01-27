@@ -13,7 +13,10 @@
 #include "UltraSonic.h"
 
 UltraSonic::UltraSonic(int pintype, int pin_one, int pin_two = 0){
-	if(!pintype){
+	
+	_pinType = pintype;
+	
+	if(pintype == THREE_PIN){
 		_sigPin = pin_one;
 		pinMode(_sigPin, INPUT);
 	} else {
@@ -29,16 +32,26 @@ void UltraSonic::sensing(int legthType){
 	long duration;
 	float distance;
 	
-	digitalWrite(_trigPin, LOW);
-	delayMicroseconds(2);
-
-	digitalWrite(_trigPin, HIGH);
-	delayMicroseconds(10);
-	digitalWrite(_trigPin, LOW);
-
-	duration = pulseIn(_echoPin, HIGH);
-
-	distance= duration*0.034/2;
+	if(_pinType == THREE_PIN){
+		
+	} else {
+		
+		
+		digitalWrite(_trigPin, LOW);
+		delayMicroseconds(2);
+	
+		digitalWrite(_trigPin, HIGH);
+		delayMicroseconds(10);
+		digitalWrite(_trigPin, LOW);
+	
+		duration = pulseIn(_echoPin, HIGH);
+		
+		if(legthType == CM)
+			distance= duration*0.034/2;
+	}
+	
+	
+	
 
 	_distance = distance;
 	
