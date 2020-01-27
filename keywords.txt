@@ -19,3 +19,7 @@ distPrint	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
+FEET	LITERAL1
+CM	LITERAL1
+INCH	LITERAL1
+MM	LITERAL1
