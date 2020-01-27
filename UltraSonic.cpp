@@ -35,8 +35,6 @@ void UltraSonic::sensing(int legthType){
 	if(_pinType == THREE_PIN){
 		
 	} else {
-		
-		
 		digitalWrite(_trigPin, LOW);
 		delayMicroseconds(2);
 	
@@ -46,11 +44,13 @@ void UltraSonic::sensing(int legthType){
 	
 		duration = pulseIn(_echoPin, HIGH);
 		
-		if(legthType == CM)
-			distance= duration*0.034/2;
+		distance= duration*0.034/2;
+		
+		if(legthType == INCH)
+			distance *= 2.54;
+		if(legthType == FEET)
+			distance = (distance / 10) * 3.28;
 	}
-	
-	
 	
 
 	_distance = distance;
