@@ -26,16 +26,15 @@ void loop() {
   //+ delay(ms)
   us.distPrint(1000);
 
-  //distByInt()
-  //sensing distance and return distance value(int)
-  int distInt = us.distByInt();
+  //ensureDist()
+  //sensing distance and return distance value(default float type)
+  int distInt = us.distByInt(); //auto-casting
   
   //+ delay(ms)
-  int distInt = us.distByInt(1000);
+  int distInt = us.distByInt(1000); //auto-casting
 
-  //distByFloat()
-  //sensing distance and return distance value(float)
-  float distFloat = us.distByFloat();
+
+  float distFloat = us.distByFloat(); //normal use
 
   //+ delay(ms)
   float distFloat = us.distByFloat(1000);
