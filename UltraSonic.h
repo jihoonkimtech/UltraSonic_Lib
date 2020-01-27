@@ -6,8 +6,8 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.1
- * date  2020-01-25
+ * version  V0.0.2
+ * date  2020-01-27
 */
 
 #ifndef _UltraSonic_H_
@@ -20,15 +20,12 @@ class UltraSonic{
 		UltraSonic(int trigPin, int echoPin);
 		
 		/* return distance */
-		float distByFloat(int ms);
-		float distByFloat();
+		float distByFloat(int ms = 0);
 		
 		/* return (int)distance */
-		int distByInt(int ms);
-		int distByInt();
+		int distByInt(int ms = 0);
 		
-		void distPrint();
-		void distPrint(int ms);
+		void distPrint(int ms = 0);
 		
 		void sensing();
 		

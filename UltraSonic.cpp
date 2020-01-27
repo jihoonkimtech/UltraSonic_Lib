@@ -6,8 +6,8 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.1
- * date  2020-01-25
+ * version  V0.0.2
+ * date  2020-01-27
 */
 
 #include "UltraSonic.h"
@@ -41,37 +41,21 @@ void UltraSonic::sensing(){
 }
 
 
-int UltraSonic::distByInt(){
-	sensing();
-	return (int)_distance;
-}
-
-int UltraSonic::distByInt(int ms){
+int UltraSonic::distByInt(int ms = 0){
 	sensing();
 	delay(ms);
 	return (int)_distance;
 }
 
-float UltraSonic::distByFloat(){
-	sensing();
-	return _distance;
-}
 
-float UltraSonic::distByFloat(int ms){
+float UltraSonic::distByFloat(int ms = 0){
 	sensing();
 	delay(ms);
 	return _distance;
 }
 
 
-void UltraSonic::distPrint(){
-	sensing();
-	Serial.print("distance : ");
-	Serial.print(_distance);
-	Serial.println(" cm");
-}
-
-void UltraSonic::distPrint(int ms){
+void UltraSonic::distPrint(int ms = 0){
 	sensing();
 	Serial.print("distance : ");
 	Serial.print(_distance);
