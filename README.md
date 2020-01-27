@@ -6,8 +6,12 @@
 ### Versions History
 - **Demo (V0.0.1)**
   - add Keyword : distByFloat(),(int ms) / distByInt(),(int ms) / distPrint(),(int ms).
+  
 - **Demo (V0.0.2)**
   - combine Keyword : distByFloat(int ms=0) / distByInt(int ms=0) / distPrint(int ms=0).
+  
+- **Demo (V0.0.3)**
+  - combine Keyword : distByFloat + distByInt -> ensureDist(int ms=0).
   
   
 ### Source
@@ -27,12 +31,8 @@
 
 
 ### Keyword/Function
-- **distByFloat(int ms)**
-  - Sensing distance then return value(float type)
-  - (int ms) means delay time(micro seconds) (0 is the initial value)
-  
-- **distByInt(int ms)**
-  - Sensing distance then return value(int type)
+- **ensureDist(int ms)**
+  - Sensing distance then return value(default float type)
   - (int ms) means delay time(micro seconds) (0 is the initial value)
   
 - **distPrint(int ms)**

@@ -6,7 +6,7 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.2
+ * version  V0.0.3
  * date  2020-01-27
 */
 
@@ -41,14 +41,7 @@ void UltraSonic::sensing(){
 }
 
 
-int UltraSonic::distByInt(int ms = 0){
-	sensing();
-	delay(ms);
-	return (int)_distance;
-}
-
-
-float UltraSonic::distByFloat(int ms = 0){
+float UltraSonic::ensureDist(int ms = 0){
 	sensing();
 	delay(ms);
 	return _distance;
