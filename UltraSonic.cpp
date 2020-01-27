@@ -6,21 +6,25 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.3
- * date  2020-01-27
+ * version  V0.0.4
+ * date  2020-01-28
 */
 
 #include "UltraSonic.h"
 
-UltraSonic::UltraSonic(int trigPin, int echoPin){
-	_trigPin = trigPin;
-	_echoPin = echoPin;
-	
-	pinMode(_trigPin, OUTPUT);
-	pinMode(_echoPin, INPUT);
+UltraSonic::UltraSonic(int pintype, int pin_one, int pin_two = 0){
+	if(!pintype){
+		_sigPin = pin_one;
+		pinMode(_sigPin, INPUT);
+	} else {
+		_trigPin = pin_one;
+		_echoPin = pin_two;
+		pinMode(_trigPin, OUTPUT);
+		pinMode(_echoPin, INPUT);
+	}	
 }
 
-void UltraSonic::sensing(){
+void UltraSonic::sensing(int legthType){
 	
 	long duration;
 	float distance;
@@ -41,15 +45,15 @@ void UltraSonic::sensing(){
 }
 
 
-float UltraSonic::ensureDist(int ms = 0){
-	sensing();
+float UltraSonic::ensureDist(int ms = 0, int legthType = 1){
+	sensing(legthType);
 	delay(ms);
 	return _distance;
 }
 
 
-void UltraSonic::distPrint(int ms = 0){
-	sensing();
+void UltraSonic::distPrint(int ms = 0, int legthType = 1){
+	sensing(legthType);
 	Serial.print("distance : ");
 	Serial.print(_distance);
 	Serial.println(" cm");

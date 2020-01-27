@@ -6,8 +6,8 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.3
- * date  2020-01-27
+ * version  V0.0.4
+ * date  2020-01-28
 */
 
 #ifndef _UltraSonic_H_
@@ -15,18 +15,24 @@
 
 #include "Arduino.h"
 
+enum {
+	FOUR_PIN = 0, THREE_PIN,
+	CM = 0, FEET, INCH
+};
+
 class UltraSonic{
 	public :
-		UltraSonic(int trigPin, int echoPin);
+		UltraSonic(int pinType, int pin_one, int pin_two = 0);
 		
 		/* return distance */
-		float ensureDist(int ms = 0);
+		float ensureDist(int ms = 0, int legthType = 1);
 		
-		void distPrint(int ms = 0);
+		void distPrint(int ms = 0, int legthType = 1);
 		
-		void sensing();
+		void sensing(int legthType);
 		
 	private : 
+		int _sigPin;
 		int _echoPin;
 		int _trigPin;
 		float _distance;
