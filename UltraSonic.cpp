@@ -68,7 +68,7 @@ void UltraSonic::sensing(int legthType){
 }
 
 
-float UltraSonic::ensureDist(int ms = 0, int legthType = 1){
+float UltraSonic::mesureDist(int ms = 0, int legthType = 1){
 	sensing(legthType);
 	delay(ms);
 	return _distance;
