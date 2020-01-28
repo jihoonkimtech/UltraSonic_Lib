@@ -7,7 +7,7 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V0.0.4
- * date  2020-01-28
+ * date  2020-01-29
 */
 
 #ifndef _UltraSonic_H_
@@ -17,7 +17,7 @@
 
 enum {
 	FOUR_PIN = 0, THREE_PIN,
-	CM = 0, FEET, INCH
+	CM = 0, FEET, INCH, MM, METER
 };
 
 class UltraSonic{

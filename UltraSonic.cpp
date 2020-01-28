@@ -7,7 +7,7 @@
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
  * version  V0.0.4
- * date  2020-01-28
+ * date  2020-01-29
 */
 
 #include "UltraSonic.h"
@@ -50,6 +50,10 @@ void UltraSonic::sensing(int legthType){
 			distance *= 2.54;
 		if(legthType == FEET)
 			distance = (distance / 10) * 3.28;
+		if(legthType == METER)
+			distance /= 10;
+		if(legthType == MM)
+			distance *= 10;
 	}
 	
 
