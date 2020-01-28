@@ -42,9 +42,6 @@ void UltraSonic::sensing(int legthType){
   		
   		pinMode(pingPin, INPUT);
   		duration = pulseIn(pingPin, HIGH);
-  		
-  		duration = duration / 29 / 2;
-
 	} else {
 		digitalWrite(_trigPin, LOW);
 		delayMicroseconds(2);
@@ -54,23 +51,20 @@ void UltraSonic::sensing(int legthType){
 		digitalWrite(_trigPin, LOW);
 	
 		duration = pulseIn(_echoPin, HIGH);
-		
-		distance= duration*0.034/2;
 	}
 	
+	distance = (duration/2) / 29.1;
+	
 	if(legthType == INCH)
-		distance *= 2.54;
-	if(legthType == FEET)
+		distance = (duration/2) / 74;
+	else if(legthType == FEET)
 		distance = (distance / 10) * 3.28;
-	if(legthType == METER)
-		distance /= 10;
-	if(legthType == MM)
-		distance *= 10;
+	else if(legthType == METER)
+		distance =  distance/10;
+	else if(legthType == MM)
+		distance *= distance*10;
 	
-	
-
 	_distance = distance;
-	
 }
 
 
