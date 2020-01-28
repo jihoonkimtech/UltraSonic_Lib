@@ -18,7 +18,7 @@ UltraSonic::UltraSonic(int pintype, int pin_one, int pin_two = 0){
 	
 	if(pintype == THREE_PIN){
 		_sigPin = pin_one;
-		pinMode(_sigPin, INPUT);
+		//pinMode(_sigPin, OUTPUT);
 	} else {
 		_trigPin = pin_one;
 		_echoPin = pin_two;
@@ -33,7 +33,18 @@ void UltraSonic::sensing(int legthType){
 	float distance;
 	
 	if(_pinType == THREE_PIN){
-		
+		pinMode(pingPin, OUTPUT);
+		digitalWrite(_sigPin, LOW);
+  		delayMicroseconds(2);
+  		digitalWrite(_sigPin, HIGH);
+  		delayMicroseconds(5);
+  		digitalWrite(_sigPin, LOW);
+  		
+  		pinMode(pingPin, INPUT);
+  		duration = pulseIn(pingPin, HIGH);
+  		
+  		duration = duration / 29 / 2;
+
 	} else {
 		digitalWrite(_trigPin, LOW);
 		delayMicroseconds(2);
@@ -45,16 +56,17 @@ void UltraSonic::sensing(int legthType){
 		duration = pulseIn(_echoPin, HIGH);
 		
 		distance= duration*0.034/2;
-		
-		if(legthType == INCH)
-			distance *= 2.54;
-		if(legthType == FEET)
-			distance = (distance / 10) * 3.28;
-		if(legthType == METER)
-			distance /= 10;
-		if(legthType == MM)
-			distance *= 10;
 	}
+	
+	if(legthType == INCH)
+		distance *= 2.54;
+	if(legthType == FEET)
+		distance = (distance / 10) * 3.28;
+	if(legthType == METER)
+		distance /= 10;
+	if(legthType == MM)
+		distance *= 10;
+	
 	
 
 	_distance = distance;
