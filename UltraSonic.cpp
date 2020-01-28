@@ -80,6 +80,10 @@ void UltraSonic::distPrint(int ms = 0, int legthType = 1){
 		Serial.println(" in");
 	if(legthType == FEET)
 		Serial.println(" ft");
+	if(legthType == METER)
+		Serial.println(" m");
+	if(legthType == MM)
+		Serial.println(" mm");
 	else
 		Serial.println(" cm");
 		
