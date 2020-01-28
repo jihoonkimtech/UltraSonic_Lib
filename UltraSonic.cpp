@@ -45,9 +45,8 @@ void UltraSonic::sensing(int legthType){
 	} else {
 		digitalWrite(_trigPin, LOW);
 		delayMicroseconds(2);
-	
 		digitalWrite(_trigPin, HIGH);
-		delayMicroseconds(10);
+		delayMicroseconds(5);
 		digitalWrite(_trigPin, LOW);
 	
 		duration = pulseIn(_echoPin, HIGH);
@@ -62,7 +61,7 @@ void UltraSonic::sensing(int legthType){
 	else if(legthType == METER)
 		distance =  distance/10;
 	else if(legthType == MM)
-		distance *= distance*10;
+		distance = distance*10;
 	
 	_distance = distance;
 }
