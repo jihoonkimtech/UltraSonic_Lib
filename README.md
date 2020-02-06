@@ -10,8 +10,9 @@
 - **Demo (V0.0.2)**
   - combine Keyword : distByFloat(int ms=0) / distByInt(int ms=0) / distPrint(int ms=0).
   
-- **Demo (V0.0.3)**
+- **Demo (V0.0.4)**
   - combine Keyword : distByFloat + distByInt -> ensureDist(int ms=0).
+  - function test : length_type{MM, CM, M, FEET, INCH), pin_type{THREE_PIN, FOUR_PIN)
   
   
 ### Source
