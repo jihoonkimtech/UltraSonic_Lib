@@ -22,7 +22,10 @@
   
 - **UltraSonic.cpp**
   - function source file.
-
+  
+- **exemples/basics/basics.ino**
+  - Default example with all basic functions.
+  
 
 ### how to include
 - case library file in Arduino libraries Folder
