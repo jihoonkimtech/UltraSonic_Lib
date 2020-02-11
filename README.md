@@ -1,4 +1,4 @@
-### UltraSonic Library
+### UltraSonic_Lib
 - **Library for UltraSonic Distance Sensor**
 - **Based on HC-SR04**(datasheet in /doc/HCSR04.pdf)
 
@@ -13,6 +13,7 @@
 - **Pre-release (V1.0.0)**
   - combine Keyword : distByFloat + distByInt -> ensureDist(int ms=0).
   - function test : length_type{MM, CM, M, FEET, INCH), pin_type{THREE_PIN, FOUR_PIN)
+  - Registration on Arudino Library Manager!
   
   
 ### Source
@@ -21,7 +22,10 @@
   
 - **UltraSonic.cpp**
   - function source file.
-
+  
+- **exemples/basics/basics.ino**
+  - Default example with all basic functions.
+  
 
 ### how to include
 - case library file in Arduino libraries Folder
