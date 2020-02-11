@@ -11,7 +11,7 @@
   - combine Keyword : distByFloat(int ms=0) / distByInt(int ms=0) / distPrint(int ms=0).
   
 - **Pre-release (V1.0.0)**
-  - combine Keyword : distByFloat + distByInt -> ensureDist(int ms=0).
+  - combine Keyword : distByFloat + distByInt -> mesureDist(int ms=0).
   - function test : length_type{MM, CM, M, FEET, INCH), pin_type{THREE_PIN, FOUR_PIN)
   - Registration on Arudino Library Manager!
   

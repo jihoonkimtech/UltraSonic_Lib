@@ -13,7 +13,7 @@ UltraSonic	KEYWORD1
 #######################################
 
 sensing	KEYWORD2
-ensureDist	KEYWORD2
+mesureDist	KEYWORD2
 distPrint	KEYWORD2
 
 #######################################
