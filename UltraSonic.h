@@ -6,8 +6,8 @@
  *
  * author jihoonkimtech (jihoonkimtech@naver.com)
  *			(Republic of Korea)
- * version  V0.0.4
- * date  2020-01-29
+ * version  V1.0.0
+ * date  2020-02-12
 */
 
 #ifndef _UltraSonic_H_
