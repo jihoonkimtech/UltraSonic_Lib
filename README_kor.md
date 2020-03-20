@@ -2,6 +2,8 @@
 ![](../header.png)
 > 초음파센서의 사용을 도와주는 라이브러리입니다.
 
+[ENGLISH VERSION](https://github.com/jihoonkimtech/UltraSonic_Lib/blob/master/README.md)
+
 <br>
 
 <!-- NPM Version -->
