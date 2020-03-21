@@ -25,9 +25,9 @@ class UltraSonic{
 		UltraSonic(int pinType, int pin_one, int pin_two = 0);
 		
 		/* return distance */
-		float mesureDist(int ms = 0, int legthType = 1);
+		float mesureDist(int ms = 0, int legthType = 0);
 		
-		void distPrint(int ms = 0, int legthType = 1);
+		void distPrint(int ms = 0, int legthType = 0);
 		
 		void sensing(int legthType);
 		

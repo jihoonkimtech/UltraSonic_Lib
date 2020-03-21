@@ -52,7 +52,7 @@ void UltraSonic::sensing(int legthType){
 		duration = pulseIn(_echoPin, HIGH);
 	}
 	
-	distance = (duration/2) / 29.1;
+	distance = (duration/2) / 29.1; //cm
 	
 	if(legthType == INCH)
 		distance = (duration/2) / 74;
@@ -67,14 +67,14 @@ void UltraSonic::sensing(int legthType){
 }
 
 
-float UltraSonic::mesureDist(int ms = 0, int legthType = 1){
+float UltraSonic::mesureDist(int ms = 0, int legthType = 0){
 	sensing(legthType);
 	delay(ms);
 	return _distance;
 }
 
 
-void UltraSonic::distPrint(int ms = 0, int legthType = 1){
+void UltraSonic::distPrint(int ms = 0, int legthType = 0){
 	sensing(legthType);
 	Serial.print("distance : ");
 	Serial.print(_distance);
