@@ -103,6 +103,8 @@ _The contents of the example are see ``Exemples`` folder._
 
 ## Update History
 
+* 1.0.1
+    * fix: Change default length type to CM(centimeter)
 * 1.0.0
     * First official version
     * fix: Combine function (distByFloat + distByInt -> mesureDist).
