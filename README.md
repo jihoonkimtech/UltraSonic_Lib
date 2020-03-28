@@ -84,7 +84,6 @@ Follows the MIT license ( Please check ``LICENSE`` file for more information. )
     - `HC-SR04` (datasheet in /doc/HCSR04.pdf)
     - all TRIG, ECHO Type UltraSonic Sensor
 
-### Wiring
 - The boards below are supported.
     - Test Finished.
         - `Arduino UNO`

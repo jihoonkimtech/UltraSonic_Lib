@@ -86,7 +86,6 @@ MIT 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할
     - `HC-SR04` (데이터시트 파일은 /doc/HCSR04.pdf 입니다)
     - TRIG와 ECHO를 사용하는 모든 초음파 센서.
 
-### Wiring
 - 아래의 보드를 지원합니다.
     - 실사용 테스트 완료.
         - `Arduino UNO`
