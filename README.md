@@ -2,7 +2,7 @@
 ![](../header.png)
 > Library for UltraSonic Distance Sensor.
 
-[KOREAN VERSION](https://github.com/jihoonkimtech/UltraSonic_Lib/blob/master/README.md)
+[KOREAN VERSION](https://github.com/jihoonkimtech/UltraSonic_Lib/blob/master/README_kor.md)
 
 <br>
 
