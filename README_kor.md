@@ -20,22 +20,22 @@ MIT 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할
 ### 코드
 #### 라이브러리 선언
 - 아두이노의 라이브러리 폴더에 설치시
-```Arduino
+```C++
     #include <UltraSonic.h>
 ```
 - 소스코드와 동일한 폴더에 설치시
-```Arduino
+```C++
     #include <"UltraSonic_Lib/UltraSonic.h">
 ```
 #### 객체 생성
 - FOUR PIN TYPE (4핀 센서 사용)
-```C
+```C++
     UltraSonic us_sensor(FOUR_PIN, (int)TRIG, (int)ECHO);
     // us_sensor 는 객체 이름입니다.
     // pinType = FOUR_PIN (TRIG pin, ECHO pin)
 ```
 - THREE PIN TYPE (3핀 센서 사용)
-```Arduino
+```C++
     UltraSonic us_sensor(THREE_PIN, (int)SIG);
     // us_sensor 는 객체 이름입니다.
     // pinType = THREE_PIN (only SIG pin)
@@ -43,7 +43,7 @@ MIT 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할
 
 #### 기능
 - mesureDist (int ms = 0, int legthType = 1)
-```Arduino
+```C++
     float distance = 0;
     distance = us_sensor.mesureDist();
     //거리를 측정하여 내부 변수에 저장해 float 타입으로 반환합니다.
@@ -59,7 +59,7 @@ MIT 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할
 ```
 
 - distPrint (int ms = 0, int legthType = 1)
-```Arduino
+```C++
     Serial.begin(baud_rate);
     us_sensor.distPrint();
     //거리를 측정하여 내부 변수에 저장해 거리 값을 출력합니다.
@@ -74,7 +74,7 @@ MIT 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할
 ```
 
 - sensing (int legthType)
-```Arduino
+```C++
     sensing(legthType);
     //거리를 재측정하여 내부 변수의 거리 변수에 다시 대입합니다.
 ```

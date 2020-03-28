@@ -20,22 +20,22 @@ Follows the MIT license ( Please check ``LICENSE`` file for more information. )
 ### Code
 #### Library Import
 - in case of Library file in Arduino/Library folder
-```Arduino
+```C++
     #include <UltraSonic.h>
 ```
 - In case of Library file in Source code file
-```Arduino
+```C++
     #include <"UltraSonic_Lib/UltraSonic.h">
 ```
 #### Create Object
 - FOUR PIN TYPE
-```Arduino
+```C++
     UltraSonic us_sensor(FOUR_PIN, (int)TRIG, (int)ECHO);
     // us_sensor is object name
     // pinType = FOUR_PIN (TRIG pin, ECHO pin)
 ```
 - THREE PIN TYPE
-```Arduino
+```C++
     UltraSonic us_sensor(THREE_PIN, (int)SIG);
     // us_sensor is object name
     // pinType = THREE_PIN (only SIG pin)
@@ -43,7 +43,7 @@ Follows the MIT license ( Please check ``LICENSE`` file for more information. )
 
 #### Function
 - mesureDist (int ms = 0, int legthType = 1)
-```Arduino
+```C++
     float distance = 0;
     distance = us_sensor.mesureDist();
     //return measured distance value(float type)
@@ -57,7 +57,7 @@ Follows the MIT license ( Please check ``LICENSE`` file for more information. )
 ```
 
 - distPrint (int ms = 0, int legthType = 1)
-```Arduino
+```C++
     Serial.begin(baud_rate);
     us_sensor.distPrint();
     //print measured distance value
@@ -72,7 +72,7 @@ Follows the MIT license ( Please check ``LICENSE`` file for more information. )
 ```
 
 - sensing (int legthType)
-```Arduino
+```C++
     sensing(legthType);
     //Renew distance value inside object
 ```
