@@ -33,15 +33,15 @@ void UltraSonic::sensing(int legthType){
 	float distance;
 	
 	if(_pinType == THREE_PIN){
-		pinMode(pingPin, OUTPUT);
+		pinMode(_sigPin, OUTPUT);
 		digitalWrite(_sigPin, LOW);
   		delayMicroseconds(2);
   		digitalWrite(_sigPin, HIGH);
   		delayMicroseconds(5);
   		digitalWrite(_sigPin, LOW);
   		
-  		pinMode(pingPin, INPUT);
-  		duration = pulseIn(pingPin, HIGH);
+  		pinMode(_sigPin, INPUT);
+  		duration = pulseIn(_sigPin, HIGH);
 	} else {
 		digitalWrite(_trigPin, LOW);
 		delayMicroseconds(2);
