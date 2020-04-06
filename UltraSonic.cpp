@@ -52,7 +52,7 @@ void UltraSonic::sensing(int legthType){
 		duration = pulseIn(_echoPin, HIGH);
 	}
 	
-	distance = (duration/2) / 29.1; //cm
+	distance = duration / 57.6; //cm
 	
 	if(legthType == INCH)
 		distance = (duration/2) / 74;
